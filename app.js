@@ -6,7 +6,7 @@ import mongoose from 'mongoose';
 
 let app = express();
 
-const mongoDB = 'mongodb://127.0.0.1:27017/test';
+const mongoDB = 'mongodb://127.0.0.1:27017/my_database';
 mongoose.connect(mongoDB, {
   poolSize: 10
 });
@@ -21,6 +21,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', index);
 app.use('/api/product', product);
 
-app.listen(3000, function () {
+app.listen(3000, () => {
   console.log('Example app listening on port 3000!')
 });
