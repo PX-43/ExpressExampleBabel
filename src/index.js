@@ -8,6 +8,7 @@ let app = express();
 
 const mongoDB = 'mongodb://127.0.0.1:27017/my_database';
 mongoose.connect(mongoDB, {
+  useNewUrlParser: true,
   poolSize: 10
 });
 
