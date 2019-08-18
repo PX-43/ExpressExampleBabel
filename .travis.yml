@@ -5,6 +5,7 @@ services:
 
 node_js:
   - "10"
+  - "12"
   
 install:
   - npm install
